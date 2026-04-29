@@ -1,8 +1,8 @@
-# ⚽ Clasificación Premier League - Angular 18
+#  Clasificación Premier League - Angular 18
 
 Aplicación Angular que reproduce la práctica de **Clasificación de la Premier League** con una arquitectura orientada a objetos, componentes separados por funcionalidad y modelo de datos completo.
 
-## 📋 Características Principales
+##  Características Principales
 
 ✅ **Modelo de Datos POO** - Clases para Equipo, Jugador, Clasificación y Enfrentamiento  
 ✅ **Proyecto Angular Funcional** - Compilado y listo para producción  
@@ -15,7 +15,7 @@ Aplicación Angular que reproduce la práctica de **Clasificación de la Premier
 
 ---
 
-## 🚀 Inicio Rápido
+##  Inicio Rápido
 
 ### Requisitos
 - Node.js 18.x o superior
@@ -48,7 +48,7 @@ ng build --configuration production
 
 ---
 
-## 📁 Estructura del Proyecto
+##  Estructura del Proyecto
 
 ```
 src/
@@ -94,7 +94,7 @@ README.md                                 # Este archivo
 
 ---
 
-## 🎯 Rutas de la Aplicación
+##  Rutas de la Aplicación
 
 | Ruta | Componente | Descripción |
 |------|-----------|-------------|
@@ -104,7 +104,7 @@ README.md                                 # Este archivo
 
 ---
 
-## 📊 Modelos de Datos
+##  Modelos de Datos
 
 ### Equipo
 - ID, nombre, ciudad, fundación, estadio, entrenador
@@ -133,7 +133,7 @@ README.md                                 # Este archivo
 
 ---
 
-## 🎨 Interfaz de Usuario
+##  Interfaz de Usuario
 
 ### Navbar
 - Navegación principal con logo ⚽
@@ -161,7 +161,7 @@ README.md                                 # Este archivo
 
 ---
 
-## 🔄 Flujo de Datos
+##  Flujo de Datos
 
 ```
 PremierLeagueService
@@ -178,7 +178,7 @@ PremierLeagueService
 
 ---
 
-## 📚 Tecnologías Utilizadas
+##  Tecnologías Utilizadas
 
 - **Angular 18** - Framework principal
 - **TypeScript 5.x** - Lenguaje tipado
@@ -188,31 +188,7 @@ PremierLeagueService
 
 ---
 
-## 🧪 Scripts Disponibles
-
-```bash
-# Desarrollo
-npm start                    # ng serve
-
-# Compilación
-npm run build               # ng build
-npm run build:prod          # ng build --configuration production
-
-# Testing
-npm test                    # ng test
-npm run test:ci             # Pruebas en CI/CD
-
-# Linting
-npm run lint                # ng lint (si está configurado)
-
-# Auditoría
-npm audit                   # Verificar vulnerabilidades
-npm audit fix               # Arreglar vulnerabilidades
-```
-
----
-
-## 🎓 Conceptos Implementados
+##  Conceptos Implementados
 
 ### Programación Orientada a Objetos
 ✅ Clases con propiedades y métodos  
@@ -232,14 +208,14 @@ npm audit fix               # Arreglar vulnerabilidades
 
 ---
 
-## 📖 Documentación Adicional
+##  Documentación Adicional
 
-Para ver el **Diagrama UML completo** y más detalles técnicos, consulta:
-📄 [DOCUMENTACION.md](DOCUMENTACION.md)
+Para ver el **Diagrama UML completo**:
+ [DOCUMENTACION.md](DOCUMENTACION.md)
 
 ---
 
-## 🤝 Requisitos de la Práctica Completados
+##  Requisitos de la Práctica Completados
 
 | # | Requisito | Estado |
 |---|-----------|--------|
@@ -253,40 +229,3 @@ Para ver el **Diagrama UML completo** y más detalles técnicos, consulta:
 
 ---
 
-## 💡 Extensiones Futuras
-
-- [ ] Backend API REST con Node.js/Express
-- [ ] Base de datos con MongoDB
-- [ ] Autenticación de usuarios
-- [ ] Estadísticas detalladas de jugadores
-- [ ] Gráficos de rendimiento
-- [ ] Sistema de predicción de resultados
-- [ ] Comentarios y puntuaciones
-- [ ] Modo oscuro
-
----
-
-## 📝 Licencia
-
-Proyecto educativo - Práctica de Clasificación Angular
-
----
-
-## 👨‍💻 Autor
-
-Desarrollado como práctica académica de Angular 18 con arquitectura POO.
-
-**Fecha:** Abril 2026
-
----
-
-## 📞 Soporte
-
-Si tienes dudas sobre el proyecto:
-1. Revisa la [DOCUMENTACION.md](DOCUMENTACION.md)
-2. Verifica las rutas en [app.routes.ts](src/app/app.routes.ts)
-3. Consulta los comentarios en el código
-
----
-
-**¡Disfrutá de la aplicación! ⚽**
