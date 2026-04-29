@@ -1,10 +1,23 @@
 # Clasificación Premier League - Angular
 
-## 📋 Descripción del Proyecto
+## Descripción del Proyecto
 
 Aplicación Angular que reproduce la práctica de Clasificación de la Premier League con modelos de datos orientados a objetos (POO) y componentes separados por funcionalidad visual.
 
-## 🎯 Requisitos Implementados
+## Requisitos de la práctica (versión depurada)
+
+Esta práctica se desarrollará íntegramente en el tiempo de clase y persigue afianzar los conocimientos adquiridos. Requisitos esenciales:
+
+- **Objetivo:** Reproducir la práctica "Clasificación" anterior implementándola en una aplicación Angular.
+- **Modelo de datos:** La información debe almacenarse en modelos (POO), no en matrices simples.
+- **Repositorio:** Proyecto Angular funcional subido al repositorio del alumno.
+- **Diagrama de clases:** Incluir en la documentación (por ejemplo, en GIT) un UML del diagrama de clases.
+- **Componentes:** Crear componentes separados por partes visibles y por funcionalidad (p. ej. componente para la clasificación, otro para el cuadro/enfrentamientos, etc.).
+- **Detalle de equipo:** El nombre de cada equipo en la lista debe ser un enlace a una ficha de datos del equipo; la ficha puede incluir, por ejemplo, el listado de jugadores.
+- **Datos:** Todos los datos deben estar cargados.
+- **Extensiones valoradas:** Se valorará funcionalidad adicional aportada por el alumno.
+
+## Requisitos Implementados
 
 1. ✅ **Modelo de datos en POO** - Clases para Equipo, Jugador, Clasificación y Enfrentamiento
 2. ✅ **Proyecto Angular funcional** - Subido a repositorio con todas las dependencias
@@ -16,7 +29,7 @@ Aplicación Angular que reproduce la práctica de Clasificación de la Premier L
 
 ---
 
-## 📐 Diagrama UML de Clases
+## Diagrama UML de Clases
 
 > GitHub renderiza automáticamente los diagramas Mermaid.
 
@@ -134,7 +147,7 @@ classDiagram
 
 ---
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 src/
@@ -177,7 +190,7 @@ src/
 
 ---
 
-## 🚀 Características Implementadas
+## Características Implementadas
 
 ### 1. **Modelos de Datos (POO)**
 - `Equipo`: Información del equipo con estadísticas
@@ -227,7 +240,7 @@ npm run build
 
 ---
 
-## 📊 Datos Incluidos
+## Datos Incluidos
 
 ### 20 Equipos de la Premier League:
 1. Manchester City
@@ -259,7 +272,7 @@ npm run build
 
 ---
 
-## 🎨 Estilos y Diseño
+## Estilos y Diseño
 
 - **Navbar**: Barra de navegación azul con enlaces activos
 - **Tablas**: Diseño limpio con colores por categorías
@@ -271,19 +284,19 @@ npm run build
 
 ---
 
-## 📝 Licencia
+## Licencia
 
 Este proyecto es parte de una práctica educativa.
 
 ---
 
-## 👨‍💻 Autor
+## Autor
 
 Desarrollado como práctica de Angular con enfoque en POO y componentes.
 
 ---
 
-## 🔄 Rutas de la Aplicación
+## Rutas de la Aplicación
 
 ```
 GET /                              - Clasificación principal
@@ -293,7 +306,7 @@ GET /enfrentamientos               - Gestor de enfrentamientos
 
 ---
 
-## 📚 Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 - **Angular 18** - Framework principal
 - **TypeScript** - Lenguaje de programación
@@ -302,5 +315,3 @@ GET /enfrentamientos               - Gestor de enfrentamientos
 - **Standalone Components** - Arquitectura moderna de Angular
 
 ---
-
-*Última actualización: Abril 2026*
