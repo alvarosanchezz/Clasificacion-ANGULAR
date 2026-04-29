@@ -1,0 +1,108 @@
+<div class="detalle-container" *ngIf="equipo">
+
+  <!-- Botón volver -->
+  <button class="btn-volver" (click)="volver()">
+    &#8592; Volver a la clasificación
+  </button>
+
+  <!-- Hero del equipo -->
+  <div class="equipo-hero">
+    <div class="hero-escudo">
+      <div class="escudo-placeholder">{{ equipo.nombre.charAt(0) }}</div>
+    </div>
+    <div class="hero-info">
+      <h1>{{ equipo.nombre }}</h1>
+      <div class="hero-datos">
+        <span class="dato"><strong>Ciudad:</strong> {{ equipo.ciudad }}</span>
+        <span class="dato"><strong>Estadio:</strong> {{ equipo.estadio }}</span>
+        <span class="dato"><strong>Entrenador:</strong> {{ equipo.entrenador }}</span>
+        <span class="dato"><strong>Fundación:</strong> {{ equipo.fundacion }}</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tarjetas de estadísticas -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <p class="stat-label">Partidos</p>
+      <p class="stat-value">{{ equipo.partidos_jugados }}</p>
+    </div>
+    <div class="stat-card">
+      <p class="stat-label">Ganados</p>
+      <p class="stat-value green">{{ equipo.ganados }}</p>
+    </div>
+    <div class="stat-card">
+      <p class="stat-label">Empatados</p>
+      <p class="stat-value amber">{{ equipo.empatados }}</p>
+    </div>
+    <div class="stat-card">
+      <p class="stat-label">Perdidos</p>
+      <p class="stat-value red">{{ equipo.perdidos }}</p>
+    </div>
+    <div class="stat-card">
+      <p class="stat-label">Goles a favor</p>
+      <p class="stat-value">{{ equipo.goles_favor }}</p>
+    </div>
+    <div class="stat-card">
+      <p class="stat-label">Goles en contra</p>
+      <p class="stat-value">{{ equipo.goles_contra }}</p>
+    </div>
+    <div class="stat-card">
+      <p class="stat-label">Diferencia</p>
+      <p
+        class="stat-value"
+        [class.green]="equipo.diferencia_goles > 0"
+        [class.red]="equipo.diferencia_goles < 0"
+      >
+        {{ equipo.diferencia_goles > 0 ? '+' : '' }}{{ equipo.diferencia_goles }}
+      </p>
+    </div>
+    <div class="stat-card stat-card-pts">
+      <p class="stat-label">Puntos</p>
+      <p class="stat-value purple">{{ equipo.puntos }}</p>
+    </div>
+  </div>
+
+  <!-- Plantilla -->
+  <div class="plantilla">
+    <h2 class="plantilla-title">Plantilla</h2>
+
+    <div *ngFor="let posicion of ['Portero', 'Defensa', 'Centrocampista', 'Delantero']">
+      <div
+        class="posicion-grupo"
+        *ngIf="obtenerJugadoresPorPosicion(posicion).length > 0"
+      >
+        <h3 class="posicion-titulo">{{ posicion }}s</h3>
+        <div class="table-wrapper">
+          <table class="tabla-jugadores">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th class="th-nombre">Jugador</th>
+                <th>Nac.</th>
+                <th>Edad</th>
+                <th title="Goles">G</th>
+                <th title="Asistencias">A</th>
+                <th title="Tarjetas Amarillas">TA</th>
+                <th title="Tarjetas Rojas">TR</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let j of obtenerJugadoresPorPosicion(posicion)">
+                <td class="num">{{ j.numero_camiseta }}</td>
+                <td class="td-nombre">{{ j.nombre_completo }}</td>
+                <td>{{ j.nacionalidad }}</td>
+                <td>{{ j.edad }}</td>
+                <td>{{ j.goles }}</td>
+                <td>{{ j.asistencias }}</td>
+                <td class="amarilla">{{ j.tarjetas_amarillas }}</td>
+                <td class="roja">{{ j.tarjetas_rojas }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

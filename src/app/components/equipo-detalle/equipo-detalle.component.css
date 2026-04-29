@@ -1,0 +1,243 @@
+.detalle-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── VOLVER ── */
+.btn-volver {
+  background: transparent;
+  color: var(--pl-purple);
+  border: 2px solid var(--pl-purple);
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.86em;
+  margin-bottom: 28px;
+  transition: background 0.2s, color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-volver:hover {
+  background: var(--pl-purple);
+  color: var(--pl-green);
+}
+
+/* ── HERO ── */
+.equipo-hero {
+  background: var(--pl-purple);
+  border-radius: var(--radius);
+  padding: 36px 40px;
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  box-shadow: 0 8px 32px rgba(56, 0, 60, 0.25);
+}
+
+.hero-escudo {
+  flex-shrink: 0;
+}
+
+.escudo-placeholder {
+  width: 100px;
+  height: 100px;
+  background: var(--pl-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.8em;
+  font-weight: 900;
+  color: var(--pl-purple);
+  box-shadow: 0 4px 16px rgba(0, 255, 133, 0.3);
+}
+
+.hero-info h1 {
+  font-size: 2.2em;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.8px;
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.hero-datos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+}
+
+.dato {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.dato strong {
+  color: var(--pl-green);
+  font-weight: 700;
+}
+
+/* ── STATS ── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 14px;
+  margin-bottom: 36px;
+}
+
+.stat-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 22px 16px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--border);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.stat-card-pts {
+  border-top-color: var(--pl-purple);
+}
+
+.stat-label {
+  font-size: 0.75em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.stat-value {
+  font-size: 2em;
+  font-weight: 800;
+  color: var(--pl-purple);
+  line-height: 1;
+}
+
+.stat-value.green  { color: #16a34a; }
+.stat-value.amber  { color: #d97706; }
+.stat-value.red    { color: #dc2626; }
+.stat-value.purple { color: var(--pl-purple); }
+
+/* ── PLANTILLA ── */
+.plantilla { }
+
+.plantilla-title {
+  font-size: 1.5em;
+  font-weight: 800;
+  color: var(--pl-purple);
+  letter-spacing: -0.5px;
+  margin-bottom: 24px;
+  padding-bottom: 14px;
+  border-bottom: 3px solid var(--pl-green);
+  display: inline-block;
+}
+
+.posicion-grupo {
+  margin-bottom: 28px;
+}
+
+.posicion-titulo {
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--pl-purple);
+  margin-bottom: 12px;
+  padding-left: 12px;
+  border-left: 4px solid var(--pl-green);
+}
+
+.table-wrapper {
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.tabla-jugadores {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-jugadores thead {
+  background: var(--pl-purple);
+}
+
+.tabla-jugadores th {
+  padding: 13px 10px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.73em;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 600;
+}
+
+.tabla-jugadores th.th-nombre { text-align: left; padding-left: 14px; }
+
+.tabla-jugadores td {
+  padding: 11px 10px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.88em;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.tabla-jugadores tbody tr:last-child td { border-bottom: none; }
+.tabla-jugadores tbody tr:hover { background: #fafafa; }
+
+.num {
+  font-weight: 800;
+  color: var(--pl-purple);
+  width: 40px;
+}
+
+.td-nombre { text-align: left; padding-left: 14px; font-weight: 600; }
+
+.amarilla {
+  color: #d97706;
+  font-weight: 700;
+}
+
+.roja {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .equipo-hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 28px 20px;
+    gap: 20px;
+  }
+
+  .hero-datos { justify-content: center; }
+
+  .hero-info h1 { font-size: 1.7em; }
+
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+
+  .tabla-jugadores { font-size: 0.82em; }
+
+  .tabla-jugadores th,
+  .tabla-jugadores td { padding: 9px 6px; }
+}
+
+@media (max-width: 480px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Ocultar columnas menos importantes */
+  .tabla-jugadores th:nth-child(3),
+  .tabla-jugadores td:nth-child(3) { display: none; }
+}

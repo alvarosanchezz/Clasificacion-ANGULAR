@@ -1,0 +1,117 @@
+<div class="enfrentamiento-container">
+
+  <!-- Cabecera -->
+  <div class="page-header">
+    <div class="header-left">
+      <div class="header-badge">PL</div>
+      <div>
+        <h1>Partidos</h1>
+        <p class="header-sub">Registra resultados y actualiza la clasificación</p>
+      </div>
+    </div>
+    <button class="btn-toggle" (click)="toggleFormulario()">
+      {{ mostrarFormulario ? '✕ Cerrar' : '+ Nuevo partido' }}
+    </button>
+  </div>
+
+  <!-- Formulario añadir partido -->
+  <div class="form-card" *ngIf="mostrarFormulario">
+    <h2 class="form-title">Resultado del partido</h2>
+
+    <div class="match-inputs">
+      <!-- Local -->
+      <div class="team-block">
+        <label>Local</label>
+        <select [(ngModel)]="form.equipo_local_id" name="local">
+          <option [value]="0" disabled>Selecciona equipo</option>
+          <option *ngFor="let e of equipos" [value]="e.id">{{ e.nombre }}</option>
+        </select>
+        <input
+          type="number"
+          [(ngModel)]="form.goles_local"
+          name="goles_local"
+          min="0"
+          class="score-input"
+        />
+      </div>
+
+      <!-- Centro -->
+      <div class="center-block">
+        <span class="vs-label">VS</span>
+        <div class="jornada-block">
+          <label>Jornada</label>
+          <input
+            type="number"
+            [(ngModel)]="form.jornada"
+            name="jornada"
+            min="1"
+            class="jornada-input"
+          />
+        </div>
+      </div>
+
+      <!-- Visitante -->
+      <div class="team-block">
+        <label>Visitante</label>
+        <select [(ngModel)]="form.equipo_visitante_id" name="visitante">
+          <option [value]="0" disabled>Selecciona equipo</option>
+          <option *ngFor="let e of equipos" [value]="e.id">{{ e.nombre }}</option>
+        </select>
+        <input
+          type="number"
+          [(ngModel)]="form.goles_visitante"
+          name="goles_visitante"
+          min="0"
+          class="score-input"
+        />
+      </div>
+    </div>
+
+    <div class="form-footer">
+      <p class="msg-error" *ngIf="mensajeError">{{ mensajeError }}</p>
+      <p class="msg-exito" *ngIf="mensajeExito">{{ mensajeExito }}</p>
+      <button class="btn-guardar" (click)="agregarEnfrentamiento()">
+        Guardar partido
+      </button>
+    </div>
+  </div>
+
+  <!-- Lista de partidos -->
+  <div class="matches-section">
+    <h2 class="section-title" *ngIf="enfrentamientos.length > 0">
+      Partidos registrados
+      <span class="count-badge">{{ enfrentamientos.length }}</span>
+    </h2>
+
+    <div class="empty-state" *ngIf="enfrentamientos.length === 0">
+      <div class="empty-icon">&#9917;</div>
+      <p>Aún no hay partidos registrados.</p>
+      <p class="empty-sub">Pulsa «+ Nuevo partido» para añadir el primero.</p>
+    </div>
+
+    <div
+      *ngFor="let e of enfrentamientos"
+      class="match-card"
+      [class]="'match-card ' + getClaseResultado(e)"
+    >
+      <div class="match-meta">
+        <span class="jornada-pill">J{{ e.jornada }}</span>
+        <span class="match-date">{{ e.fecha | date:'dd/MM/yyyy' }}</span>
+      </div>
+      <div class="match-body">
+        <div class="team home">
+          <span class="team-name">{{ e.nombre_equipo_local }}</span>
+        </div>
+        <div class="score-block">
+          <span class="score">{{ e.goles_local }}</span>
+          <span class="score-sep">–</span>
+          <span class="score">{{ e.goles_visitante }}</span>
+        </div>
+        <div class="team away">
+          <span class="team-name">{{ e.nombre_equipo_visitante }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

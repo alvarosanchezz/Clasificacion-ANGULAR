@@ -1,0 +1,36 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-brand">
+      <div class="brand-logo">
+        <span class="logo-text">PL</span>
+      </div>
+      <div class="brand-text">
+        <span class="brand-title">Premier</span>
+        <span class="brand-subtitle">League</span>
+      </div>
+    </div>
+    <ul class="navbar-menu">
+      <li>
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+          Clasificación
+        </a>
+      </li>
+      <li>
+        <a routerLink="/enfrentamientos" routerLinkActive="active">
+          Partidos
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<main class="main-content">
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-logo">PL</div>
+    <p>Premier League &copy; 2024 &mdash; Desarrollado con Angular 18</p>
+  </div>
+</footer>
